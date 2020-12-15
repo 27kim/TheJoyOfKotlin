@@ -18,7 +18,20 @@ fun main() {
 //    cancelOnlySuspend()
 //    checkCancelManually()
 //    cancelByTimeout()
-    clearOnFinally()
+//    clearOnFinally()
+//    globalScopeTest()
+
+}
+
+/**
+ * Global Scope
+ * */
+fun globalScopeTest(){
+    GlobalScope.launch {
+        (1..100).forEach{
+            println("i'm on $it")
+        }
+    }
 }
 
 
